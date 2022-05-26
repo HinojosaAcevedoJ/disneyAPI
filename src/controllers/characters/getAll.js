@@ -5,7 +5,7 @@ const getAll = async (req, res) => {
   const {
     name,
     age,
-    movieId,
+    movies,
     weight
   } = req.query
 
@@ -18,14 +18,15 @@ const getAll = async (req, res) => {
   if (age) {
     where.age = age
   }
-  if (movieId) {
-    where.movieId = movieId
+  if (movies) {
+    where.MovieMovieId = movies
   }
   if (weight) {
     where.weight = weight
   }
 
   const response = await db.Character.findAll({
+    attributes: ['img', 'name'],
     where
   })
   res.send(response)

@@ -2,28 +2,30 @@ const { Op } = require('sequelize')
 const db = require('../../../models')
 
 const getAll = async (req, res) => {
-  const { title, genreId, orderBy } = req.query
+  const { name, genre, order } = req.query
   const where = {}
 
-  if (title) {
+  if (name) {
     where.title = {
-      [Op.like]: `%${title}%`
+      [Op.like]: `%${name}%`
     }
   }
 
-  if (genreId) {
-    where.genreId = genreId
+  if (genre) {
+    where.GenreGenreId = genre
   }
 
-  if (orderBy) {
+  if (order) {
     const response = await db.Movie.findAll({
+      attributes: ['img', 'title', 'releasedate'],
       order: [
-        ['title', orderBy],
+        ['title', order],
       ]
     })
     res.send(response)
   } else {
     const response = await db.Movie.findAll({
+      attributes: ['img', 'title', 'releasedate'],
       where
     })
     res.send(response)

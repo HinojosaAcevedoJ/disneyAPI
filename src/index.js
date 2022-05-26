@@ -25,7 +25,7 @@ app.use('/genres', genreRoutes)
 
 app.listen(PORT, () => {
   console.log('El servidor está inicializado en el puerto 4000')
-  sequelize.sync({ force: true }).then(() => {
+  sequelize.sync({ force: false }).then(() => {
     console.log('Conectado con exito a la base de datos')
   }).catch(err => {
     console.log('Se ha producido un error', err)

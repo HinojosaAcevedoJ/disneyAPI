@@ -1,19 +1,31 @@
-const { Model, DataTypes } = require('sequelize')
+const { DataTypes } = require('sequelize')
 const sequelize = require('../database/db')
-const Genre = require('./genre')
-const Character = require('./Character')
 
-class Movie extends Model {}
-Movie.init({
-  title: DataTypes.STRING,
-  release_date: DataTypes.DATE,
-  rate: DataTypes.INTEGER
+const Movie = sequelize.define('Movie', {
+  movie_id: {
+    type: DataTypes.TINYINT,
+    primaryKey: true,
+    autoIncrement: true,
+    unique: true
+  },
+  img: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  title: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  releasedate: {
+    type: DataTypes.DATE,
+    allowNull: false
+  },
+  rating: {
+    type: DataTypes.DECIMAL,
+    allowNull: false
+  },
 }, {
-  sequelize,
-  modelName: "movie"
+  timestamps: false
 })
 
-Movie.Genre = Movie.hasOne(Genre)
-Movie.Character = Movie.hasMany(Character)
-
-module.export = Movie
+module.exports = Movie

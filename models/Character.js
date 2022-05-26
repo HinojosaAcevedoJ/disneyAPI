@@ -1,18 +1,35 @@
-const { Model, DataTypes } = require('sequelize')
+const { DataTypes } = require('sequelize')
 const sequelize = require('../database/db')
-const Movie = require('./movie')
 
-class Character extends Model {}
-Character.init({
-  name: DataTypes.STRING,
-  age: DataTypes.INTEGER,
-  weight: DataTypes.INTEGER,
-  story: DataTypes.INTEGER
+const Character = sequelize.define('Character', {
+  character_id: {
+    type: DataTypes.TINYINT,
+    primaryKey: true,
+    autoIncrement: true,
+    unique: true
+  },
+  img: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  age: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  weight: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  story: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 }, {
-  sequelize,
-  modelName: "character"
+  timestamps: false
 })
 
-Character.Movie = Character.hasMany(Movie)
-
-module.export = Character
+module.exports = Character

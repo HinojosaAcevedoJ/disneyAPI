@@ -7,6 +7,6 @@ const routes = new Router()
 
 routes.post('/login', login)
 
-routes.post('/signup', schemaValidator(userSchemaJoi), signup)
+routes.post('/register', schemaValidator(userSchemaJoi), signup)
 
 module.exports = routes

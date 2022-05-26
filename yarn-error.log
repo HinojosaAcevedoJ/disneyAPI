@@ -1,30 +1,30 @@
 Arguments: 
-  /home/nutz/.nvm/versions/node/v14.19.0/bin/node /home/nutz/.nvm/versions/node/v14.19.0/bin/yarn add nodemn --dev
+  /usr/local/bin/node /usr/local/bin/yarn add bscryptjs
 
 PATH: 
-  /home/nutz/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli:/home/nutz/.nvm/versions/node/v14.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemforLinux_0.58.3.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Nutz/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Nutz/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Nutz/AppData/Roaming/npm:/mnt/c/Users/Nutz/spicetify-cli
+  /home/nutz/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/Xcoke/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Xcoke/spicetify-cli:/mnt/c/Users/Xcoke/AppData/Local/Programs/Microsoft VS Code/bin
 
 Yarn version: 
-  1.22.17
+  1.22.18
 
 Node version: 
-  14.19.0
+  18.2.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/nodemn: Not found
-      at Request.params.callback [as _callback] (/home/nutz/.nvm/versions/node/v14.19.0/lib/node_modules/yarn/lib/cli.js:67029:18)
-      at Request.self.callback (/home/nutz/.nvm/versions/node/v14.19.0/lib/node_modules/yarn/lib/cli.js:140883:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (/home/nutz/.nvm/versions/node/v14.19.0/lib/node_modules/yarn/lib/cli.js:141855:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (/home/nutz/.nvm/versions/node/v14.19.0/lib/node_modules/yarn/lib/cli.js:141777:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1334:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  Error: https://registry.yarnpkg.com/bscryptjs: Not found
+      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1344:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {

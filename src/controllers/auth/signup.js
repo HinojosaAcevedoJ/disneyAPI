@@ -1,10 +1,8 @@
 const bcrypt = require('bcryptjs')
-const { create } = require('sequelize')
-const jwt = require('jsonwebtoken')
-const User = require('../../../models/User')
-const JWT_SECRET = process.env.JWT_SECRET
+const db = require('../../../models')
+const emailService = require('../../services/emailService')
 
-const login = async (req, res) => {
+const signup = async (req, res) => {
   const salt = await bcrypt.genSalt(10)
   const hashed = await bcrypt.hash(req.body.password, salt)
   const usr = {
@@ -12,13 +10,9 @@ const login = async (req, res) => {
     email: req.body.email,
     password: hashed
   }
-  try{
-    created_user = await User.create(usr)
-    message = await created_user.save()
-    res.send(message)
-  } catch (e) {
-    res.send(e)
-  }
+  const response = await db.User.create(usr)
+  emailService(usr.email)
+  res.send(response)
 }
 
-module.exports = login
+module.exports = signup

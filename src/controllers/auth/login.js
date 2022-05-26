@@ -1,11 +1,11 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const User = require('../../../models/User')
+const db = require('../../../models')
 
 const JWT_SECRET = process.env.JWT_SECRET
 
 const login = async (req, res) => {
-  const user = await User.findOne({ where : {email : req.body.email }});
+  const user = await db.User.findOne({ where : {username : req.body.username }});
   if(user){
     const password_valid = await bcrypt.compare(req.body.password,user.password);
     if(password_valid){
@@ -16,7 +16,7 @@ const login = async (req, res) => {
     }
   
   }else{
-    res.status(404).json({ error : "User does not exist" });
+    res.status(404).json({ error : "User/Password Incorrect" });
   }
 }
 

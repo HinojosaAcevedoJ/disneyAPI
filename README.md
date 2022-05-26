@@ -75,7 +75,7 @@
 	- "img": URL de imagen del personaje.
 	- "name": nombre del personaje.
 	- "age": edad del personaje.
-	- "wight": peso del personaje.
+	- "weight": peso del personaje.
 	- "story": Historia corta del personaje.
 	- "MovieMovieId": id de la pelicula o serie a la cual pertenece.
 	- https://disney-api1.herokuapp.com/characters

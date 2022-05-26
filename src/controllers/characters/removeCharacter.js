@@ -3,10 +3,11 @@ const db = require('../../../models')
 const removeCharacter = async (req, res) => {
   const response = await db.Character.destroy({
     where: {
-      id: req.params.id
+      character_id: req.params.id
     }
   })
-  res.send(response)
+  const status = response === 1 ? 200 : 404
+  res.sendStatus(status)
 }
 
 module.exports = removeCharacter

@@ -9,12 +9,12 @@
 - En este caso se requiere un usuario e email los cuales son únicos y su respectiva contraseña, el cual devolverá el id de cuenta, usuario, email y contraseña encriptada.
 [![](https://i.imgur.com/k2Oc1oa.png)](https://i.imgur.com/k2Oc1oa.png)
 
-- Actualmente si envia correos electronicos dando la bienvenida al servicio pero de momento solamente a la bendeja de mailtrap que fue para realizar pruebas durante el desarrollo.
+- Actualmente si envia correos electronicos dando la bienvenida al servicio pero de momento solamente a la bandeja de mailtrap que fue para realizar pruebas durante el desarrollo.
 [![](https://i.imgur.com/B4OoTQ7.png)](https://i.imgur.com/B4OoTQ7.png)
 
 ### Login
 - https://disney-api1.herokuapp.com/auth/login
-- Una vez creada la cuenta, procederemos a loguearnos en ella ya que no podremos agregar, editar o eliminar personajes/peliculas/series.
+- Una vez creada la cuenta, procederemos a loguearnos en ella ya que no podremos agregar, editar o eliminar personajes/peliculas/series si no lo estamos.
 [![](https://i.imgur.com/k6tzYrq.png)](https://i.imgur.com/k6tzYrq.png)
 
 - Nos pedirá el usuario y contraseña para poder loguear y nos devolvera un token que es el cual utilizaremos para autorizarnos dentro de la API.
@@ -23,39 +23,39 @@
 - Nos iremos a la pestaña "Authorization" y en type pondremos "Bearer Token" y pegaremos nuestro token para estar autorizados.
 [![](https://i.imgur.com/pqEJVcD.png)](https://i.imgur.com/pqEJVcD.png)
 ## Genero
-### Agregar genero de serie o pelicula
-- Aquí nos pedirá una imagen y el nombre del genero.
+### Agregar género de serie o película
+- Aquí nos pedirá una imagen y el nombre del género.
 	- "img"
 	- "name"
 	- https://disney-api1.herokuapp.com/genres
 [![](https://i.imgur.com/V8bqQPT.png)](https://i.imgur.com/V8bqQPT.png)
-## Peliculas o Series
-### Agregar peliculas o series
+## Películas o Series
+### Agregar películas o series
 - https://disney-api1.herokuapp.com/movies
-- Los datos requeridos para poder agregar correctamente una pelicula o serie son:
+- Los datos requeridos para poder agregar correctamente una película o serie son:
 	- "img" = url de la imagen de la pelicula.
-	- "title" = titulo de la serie o pelicula.
-	- "releasedate" = fecha de estreno de la pelicula en formato AAAA-MM-DD
+	- "title" = título de la serie o pelicula.
+	- "releasedate" = fecha de estreno de la película en formato AAAA-MM-DD
 	- "rating" = Calificación del 1 al 5 (el cual puede ser un numero entero o no)
-	- "GenreGenreId" = Id del genero al que pertenece.
+	- "GenreGenreId" = Id del género al que pertenece.
 [![](https://i.imgur.com/qUxO9Eu.png)](https://i.imgur.com/qUxO9Eu.png)
 
 ### Consultas de peliculas o series
 - https://disney-api1.herokuapp.com/movies
-- Al realizar un get sin querys devolverá el listado de peliculas mostrando su imagen, titulo y fecha de esteno.
+- Al realizar un get sin querys devolverá el listado de peliculas mostrando su imagen, título y fecha de esteno.
 [![](https://i.imgur.com/qlNltat.png)](https://i.imgur.com/qlNltat.png)
-- Disponemos de 3 querys a realizar, en este caso es filtrar por nombre de pelicula tal como se en la imagen.
+- Disponemos de 3 querys a realizar, en este caso es filtrar por nombre de película tal como se en la imagen.
 	- https://disney-api1.herokuapp.com/movies?name=Pinocchio
 [![](https://i.imgur.com/mG3L4tx.png)](https://i.imgur.com/mG3L4tx.png)
-- Segundo filtro es por genero (En este caso solo he ingresado uno, el cual es fantasia)
+- Segundo filtro es por género (En este caso solo he ingresado uno, el cual es fantasía)
 	- https://disney-api1.herokuapp.com/movies?genre=1
 [![](https://i.imgur.com/PlzthSi.png)](https://i.imgur.com/PlzthSi.png)
-- Tercer filtro es ordenar de manera ASC o DESC.
+- Tercer filtro es ordenar de manera ASC o DESC por título.
 	- https://disney-api1.herokuapp.com/movies?order=ASC
 	- https://disney-api1.herokuapp.com/movies?order=DESC
 [![](https://i.imgur.com/EWOn9Ho.png)](https://i.imgur.com/EWOn9Ho.png)
 
-### Actualizar/Eliminar una pelicula o serie.
+### Actualizar/Eliminar una película o serie.
 - En este caso nos pedirá el body a ingresar junto con la id en su url, los valores editables son:
 	- img
 	- title
@@ -65,7 +65,7 @@
 - https://disney-api1.herokuapp.com/movies/:id
 [![](https://i.imgur.com/cljniI1.png)](https://i.imgur.com/cljniI1.png)
 
-- Al remover una pelicula o serie solamente nos pedirá el id de este.
+- Al remover una película o serie solamente nos pedirá el id de este.
 	- https://disney-api1.herokuapp.com/movies/:id
 [![](https://i.imgur.com/UHGpFdl.png)](https://i.imgur.com/UHGpFdl.png)
 
@@ -77,7 +77,7 @@
 	- "age": edad del personaje.
 	- "weight": peso del personaje.
 	- "story": Historia corta del personaje.
-	- "MovieMovieId": id de la pelicula o serie a la cual pertenece.
+	- "MovieMovieId": id de la película o serie a la cual pertenece.
 	- https://disney-api1.herokuapp.com/characters
 [![](https://i.imgur.com/QYDWWJP.png)](https://i.imgur.com/QYDWWJP.png)
 ### Consultas de personajes
@@ -90,7 +90,7 @@
 - El segundo filtro es su edad, mostrará a todos los personajes según la edad a consultar.
 	- https://disney-api1.herokuapp.com/characters?age=60
 [![](https://i.imgur.com/IP7PFdP.png)](https://i.imgur.com/IP7PFdP.png)
-- Tercer filtro es la pelicula a la cual esta cada uno, mostrará una lista de todos los personajes pertenecientes a esa pelicula.
+- Tercer filtro es la pelicula a la cual esta cada uno, mostrará una lista de todos los personajes pertenecientes a esa película.
 	- https://disney-api1.herokuapp.com/characters?movies=2
 [![](https://i.imgur.com/dHEm79t.png)](https://i.imgur.com/dHEm79t.png)
 
